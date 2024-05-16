@@ -9,7 +9,7 @@
         <th scope="col">ID</th>
         <th scope="col">Titolo</th>
         <th scope="col">Prezzo</th>
-        <th scope="col">Serie</th>
+        <th scope="col">Genere</th>
         <th scope="col">Tipo</th>
         <th scope="col">Azioni</th>
       </tr>
@@ -23,9 +23,9 @@
           <td>{{ $comic->series }}</td>
           <td>{{ $comic->type }}</td>
           <td>
-            <a href="#"><i class="fa-solid fa-eye"></i></a>
-            <a href="#"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+            <a href="{{ route('comics.show', $comic) }}" class="btn btn-info"><i class="fa-solid fa-eye"></i></a>
+            <a href="#" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
           </td>
         </tr>
       @empty
