@@ -1,7 +1,5 @@
 @extends('layout.main')
 
 @section('content')
-
-<h1>Home</h1>
-
+  <h2 class="py-5 text-white">I fumetti disponibili sono {{ $num_comics }}</h2>
 @endsection

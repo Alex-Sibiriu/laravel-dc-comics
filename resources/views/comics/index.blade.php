@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-  <h1>Comics Index</h1>
+  <h1 class="py-5 text text-white">Comics Index</h1>
 
   <table class="table table-dark table-striped">
     <thead>

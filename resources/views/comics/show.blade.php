@@ -3,16 +3,15 @@
 @section('content')
   <h1 class="text-center fw-bold py-5">{{ $comic->title }}</h1>
   <div class="d-flex">
-    <div>
+    <div class="w-50 px-5">
       <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
     </div>
 
-    <div>
-      <p class="py-3"><strong>Serie: </strong>{{ $comic->series }}</p>
-      <p class="py-3"><strong>Data d'uscita: </strong>{{ $comic->sale_date }}</p>
-      <p class="py-3"><strong>Tipo: </strong>{{ $comic->type }}</p>
-      <p class="py-3"><strong>Generi: </strong>{{ $comic->series }}</p>
-      <p class="py-3"><strong>Descrizione: </strong>{{ $comic->description }}</p>
+    <div class="ps-5">
+      <p class="py-2"><strong>Data di pubblicazione: </strong>{{ $comic->sale_date }}</p>
+      <p class="py-2"><strong>Tipo: </strong>{{ $comic->type }}</p>
+      <p class="py-2"><strong>Generi: </strong>{{ $comic->series }}</p>
+      <p class="py-2"><strong>Prezzo: </strong>{{ $comic->price }}</p>
 
       <div class="d-flex">
         <ul class="list-unstyled pe-5">
@@ -36,4 +35,5 @@
 
     </div>
   </div>
+  <p class="p-5"><strong>Descrizione: </strong>{{ $comic->description }}</p>
 @endsection
