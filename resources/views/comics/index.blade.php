@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-  <h1 class="py-5 text text-white">Numero Comics: {{ $num_comics }}</h1>
+  <h1 class="py-5 text-center text-white rounded-3 bg-gray p-3 mt-3">Numero Comics: {{ $num_comics }}</h1>
 
   <table class="table table-dark table-striped">
     <thead>

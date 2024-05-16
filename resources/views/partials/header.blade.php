@@ -1,6 +1,6 @@
 <header>
 
-  <nav class="navbar navbar-expand-lg bg-black">
+  <nav class="navbar navbar-expand-lg bg-black py-4">
     <div class="container">
 
       <div class="collapse navbar-collapse" id="navbarNav">

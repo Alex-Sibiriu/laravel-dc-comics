@@ -1,8 +1,8 @@
 @extends('layout.main')
 
 @section('content')
-  <h1 class="text-center fw-bold py-5 text-white">{{ $comic->title }}</h1>
-  <div class="d-flex text-white">
+  <h1 class="text-center fw-bold py-5 mt-3 text-white rounded-3 bg-gray p-3 text-center">{{ $comic->title }}</h1>
+  <div class="d-flex text-white pt-5 rounded-3 bg-gray">
     <div class="w-50 px-5">
       <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
     </div>
@@ -35,5 +35,5 @@
 
     </div>
   </div>
-  <p class="p-5 text-white"><strong>Descrizione: </strong>{{ $comic->description }}</p>
+  <p class="p-5 text-white rounded-3 bg-gray"><strong>Descrizione: </strong>{{ $comic->description }}</p>
 @endsection

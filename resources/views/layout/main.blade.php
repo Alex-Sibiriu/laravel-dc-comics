@@ -17,7 +17,7 @@
   <title>Template</title>
 </head>
 
-<body class="bg-dark">
+<body>
   @include('partials.header')
 
   <main>

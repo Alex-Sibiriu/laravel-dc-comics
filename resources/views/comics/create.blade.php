@@ -1,9 +1,9 @@
 @extends('layout.main')
 
 @section('content')
-  <h1 class="py-5 text-white">Inserisci un nuovo fumetto</h1>
+  <h1 class="py-5 text-white text-center mt-3 rounded-3 bg-gray">Inserisci un nuovo fumetto</h1>
 
-  <form class="row text-white" action='{{ route('comics.store') }}' method='POST'>
+  <form class="row text-white rounded-3 bg-gray p-5" action='{{ route('comics.store') }}' method='POST'>
     @csrf
     <div class="col-6 mb-3">
       <label for="title" class="form-label">Titolo (title)</label>
@@ -50,7 +50,9 @@
       <textarea name="writers" class="form-control" id="writers" rows="10" required></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary w-25 me-3">Invia</button>
-    <button type="reset" class="btn btn-warning w-25">Reset</button>
+    <div class="text-center pt-3">
+      <button type="submit" class="btn btn-primary w-25 me-3">Invia</button>
+      <button type="reset" class="btn btn-warning w-25">Reset</button>
+    </div>
   </form>
 @endsection

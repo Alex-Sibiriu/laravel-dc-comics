@@ -1,3 +1,13 @@
+body {
+    background-image: url('https://mrwallpaper.com/images/hd/marvel-comics-bringing-superheroes-to-life-for-over-80-years-hhoi41wfamb2df0p.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 img {
     max-width: 100%;
+}
+
+.bg-gray {
+    background-color: rgba(0, 0, 0, 0.7);
 }
