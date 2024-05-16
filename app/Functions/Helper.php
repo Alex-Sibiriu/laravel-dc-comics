@@ -20,5 +20,6 @@ class Helper
             $exists = $model::where('slug', $slug)->first();
             $c++;
         }
+        return $slug;
     }
 }
