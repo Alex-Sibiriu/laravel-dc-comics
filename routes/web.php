@@ -16,6 +16,6 @@ use App\Http\Controllers\Guest\PageController;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
 
-Route::get('/nuova-pagina', [PageController::class, 'nuovaPagina'])->name('nuova-pagina');
+Route::get('/latest', [PageController::class, 'show_latest'])->name('show-latest');
 
 Route::resource('comics', ComicsController::class);

@@ -10,8 +10,13 @@ class PageController extends Controller
 {
     public function index()
     {
-        $num_comics = Comic::count();
+        return view('home');
+    }
 
-        return view('home', compact('num_comics'));
+    public function show_latest()
+    {
+        $comic = Comic::orderBy('sale_date', 'desc')->first();
+
+        return view('comics.show', compact('comic'));
     }
 }
