@@ -33,20 +33,22 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        dump($data);
-
         $comic = new Comic();
-        $comic->title = $data['title'];
-        $comic->slug = Helper::createSlug($comic['title'], new Comic());
-        $comic->description = $data['description'];
-        $comic->thumb = $data['thumb'];
-        $comic->price = $data['price'];
-        $comic->series = $data['series'];
-        $comic->sale_date = $data['sale_date'];
-        $comic->type = $data['type'];
-        $comic->artists = $data['artists'];
-        $comic->writers = $data['writers'];
 
+        /////////// Senza fillable() ///////
+        // $comic->title = $data['title'];
+        // $comic->slug = Helper::createSlug($comic['title'], new Comic());
+        // $comic->description = $data['description'];
+        // $comic->thumb = $data['thumb'];
+        // $comic->price = $data['price'];
+        // $comic->series = $data['series'];
+        // $comic->sale_date = $data['sale_date'];
+        // $comic->type = $data['type'];
+        // $comic->artists = $data['artists'];
+        // $comic->writers = $data['writers'];
+
+        $data['slug'] = Helper::createSlug($comic['title'], new Comic());
+        $comic->fill($data);
         $comic->save();
 
         return redirect()->route('comics.show', $comic);
@@ -63,17 +65,27 @@ class ComicsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+
+        if ($data['title'] === $comic->title) {
+            $data['slug'] = $comic->slug;
+        } else {
+            $data['slug'] = Helper::createSlug($comic['title'], new Comic());
+        }
+        $comic->fill($data);
+        $comic->update($data);
+
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
