@@ -82,7 +82,7 @@ class ComicsController extends Controller
         } else {
             $data['slug'] = Helper::createSlug($comic['title'], new Comic());
         }
-        $comic->fill($data);
+
         $comic->update($data);
 
         return redirect()->route('comics.show', $comic);
