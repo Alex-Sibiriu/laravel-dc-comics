@@ -13,7 +13,7 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = Comic::all();
+        $comics = Comic::orderByDesc('id')->get();
         $num_comics = Comic::count();
 
         return view('comics.index', compact('comics', 'num_comics'));
@@ -91,8 +91,10 @@ class ComicsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('comics.index')->with('delete_message', 'L\' eliminazione di' . $comic->title . 'é avvenuta con successo');
     }
 }

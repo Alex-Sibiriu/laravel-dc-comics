@@ -1,7 +1,11 @@
 @extends('layout.main')
 
 @section('content')
-  <h1 class="text-center fw-bold py-5 mt-3 text-white rounded-3 bg-gray p-3 text-center">{{ $comic->title }}</h1>
+  <h1 class="text-center fw-bold py-5 mt-3 text-white rounded-3 bg-gray p-3 text-center">{{ $comic->title }}
+    <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning btn-outline-dark"><i
+        class="fa-solid fa-pencil"></i></a>
+    @include('partials.form_delete')
+  </h1>
   <div class="d-flex text-white pt-5 rounded-3 bg-gray">
     <div class="w-50 px-5">
       <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
@@ -35,5 +39,8 @@
 
     </div>
   </div>
-  <p class="p-5 text-white rounded-3 bg-gray"><strong>Descrizione: </strong>{{ $comic->description }}</p>
+  <div class="p-5 text-white rounded-3 bg-gray">
+    <p><strong>Descrizione: </strong>{{ $comic->description }}</p>
+    <a class="btn btn-info btn-outline-primary  text-white" href="{{ route('comics.index') }}">Comics Index</a>
+  </div>
 @endsection
