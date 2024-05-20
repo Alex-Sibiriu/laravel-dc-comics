@@ -10,7 +10,9 @@ class PageController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $last_comic = Comic::orderByDesc('created_at')->first();
+        $updated_comic = Comic::orderByDesc('updated_at')->first();
+        return view('home', compact('last_comic', 'updated_comic'));
     }
 
     public function show_latest()

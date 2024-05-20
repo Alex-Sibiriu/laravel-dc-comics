@@ -1,5 +1,5 @@
 body {
-    background-image: url('https://mrwallpaper.com/images/hd/marvel-comics-bringing-superheroes-to-life-for-over-80-years-hhoi41wfamb2df0p.jpg');
+    background-image: url('https://wallpapers.com/images/hd/abstract-database-diagram-7rippi39ufx9fny2.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -11,6 +11,12 @@ header {
 img {
     max-width: 100%;
 }
+
+input[type="text"],
+input[type="date"],
+textarea {
+    background-color : #d1d1d1 !important;
+  }
 
 .bg-gray {
     background-color: rgba(0, 0, 0, 0.7);
