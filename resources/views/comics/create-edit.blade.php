@@ -20,7 +20,7 @@
     <div class="col-6 mb-3">
       <label for="title" class="form-label">Titolo (title)</label>
       <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-        value="{{ old('title'), $comic?->title }}">
+        value="{{ old('title', $comic?->title) }}">
       @error('title')
         <small class="text-danger fw-bold">
           {{ $message }}
@@ -31,7 +31,7 @@
     <div class="col-6 mb-3">
       <label for="thumb" class="form-label">Immagine (thumb)</label>
       <input name="thumb" type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb"
-        value="{{ old('thumb'), $comic?->thumb }}">
+        value="{{ old('thumb', $comic?->thumb) }}">
       @error('thumb')
         <small class="text-danger fw-bold">
           {{ $message }}
@@ -42,7 +42,7 @@
     <div class="col-6 mb-3">
       <label for="series" class="form-label">Generi (series)</label>
       <input name="series" type="text" class="form-control @error('series') is-invalid @enderror" id="series"
-        value="{{ old('series'), $comic?->series }}">
+        value="{{ old('series', $comic?->series) }}">
       @error('series')
         <small class="text-danger fw-bold">
           {{ $message }}
@@ -53,7 +53,7 @@
     <div class="col-6 mb-3">
       <label for="sale_date" class="form-label">Data di pubblicazione (sale_date)</label>
       <input name="sale_date" type="date" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date"
-        value="{{ old('sale_date'), $comic?->sale_date }}">
+        value="{{ old('sale_date', $comic?->sale_date) }}">
       @error('sale_date')
         <small class="text-danger fw-bold">
           {{ $message }}
@@ -64,7 +64,7 @@
     <div class="col-6 mb-3">
       <label for="type" class="form-label">Tipologia (type)</label>
       <input name="type" type="text" class="form-control @error('type') is-invalid @enderror" id="type"
-        value="{{ old('type'), $comic?->type }}">
+        value="{{ old('type', $comic?->type) }}">
       @error('type')
         <small class="text-danger fw-bold">
           {{ $message }}
@@ -75,7 +75,7 @@
     <div class="col-6 mb-3">
       <label for="price" class="form-label">Prezzo (price)</label>
       <input name="price" type="text" class="form-control @error('price') is-invalid @enderror" id="price"
-        value="{{ old('price'), $comic?->price }}">
+        value="{{ old('price', $comic?->price) }}">
       @error('price')
         <small class="text-danger fw-bold">
           {{ $message }}
@@ -86,7 +86,7 @@
     <div class="col-12 mb-3">
       <label for="description" class="form-label">Descrizione (description)</label>
       <textarea name="description" class="form-control @error('description') is-invalid @enderror" id="description"
-        rows="10">{{ old('description'), $comic?->description }}</textarea>
+        rows="10">{{ old('description', $comic?->description) }}</textarea>
       @error('description')
         <small class="text-danger fw-bold">
           {{ $message }}
@@ -96,7 +96,7 @@
 
     <div class="col-6 mb-3">
       <label for="artists" class="form-label">Artisti (separati da una virgola)</label>
-      <textarea name="artists" class="form-control @error('artists') is-invalid @enderror" id="artists" rows="10">{{ old('artists'), $comic?->artists }}</textarea>
+      <textarea name="artists" class="form-control @error('artists') is-invalid @enderror" id="artists" rows="10">{{ old('artists', $comic?->artists) }}</textarea>
       @error('artists')
         <small class="text-danger fw-bold">
           {{ $message }}
@@ -106,7 +106,7 @@
 
     <div class="col-6 mb-3">
       <label for="writers" class="form-label">Scrittori (separati da una virgola)</label>
-      <textarea name="writers" class="form-control @error('writers') is-invalid @enderror" id="writers" rows="10">{{ old('writers'), $comic?->writers }}</textarea>
+      <textarea name="writers" class="form-control @error('writers') is-invalid @enderror" id="writers" rows="10">{{ old('writers', $comic?->writers) }}</textarea>
       @error('writers')
         <small class="text-danger fw-bold">
           {{ $message }}
