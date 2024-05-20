@@ -28,8 +28,9 @@ class ComicsController extends Controller
         $method = 'POST';
         $route = route('comics.store');
         $comic = null;
+        $title = 'Aggiungi un nuovo fumetto';
 
-        return view('comics.create-edit', compact('method', 'route', 'comic'));
+        return view('comics.create-edit', compact('method', 'route', 'comic', 'title'));
     }
 
     /**
@@ -74,8 +75,9 @@ class ComicsController extends Controller
     {
         $method = 'PUT';
         $route = route('comics.update', $comic);
+        $title = 'Modifica il fumetto';
 
-        return view('comics.create-edit', compact('comic', 'method', 'route'));
+        return view('comics.create-edit', compact('comic', 'method', 'route', 'title'));
     }
 
     /**

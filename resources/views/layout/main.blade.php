@@ -14,7 +14,7 @@
   {{-- Styles --}}
   @vite('resources/js/app.js')
 
-  <title>Template</title>
+  <title>Comics Laravel</title>
 </head>
 
 <body>

@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-  <h1 class="py-5 text-white text-center mt-3 rounded-3 bg-gray">Inserisci/Modifica un nuovo fumetto</h1>
+  <h1 class="py-5 text-white text-center mt-3 rounded-3 bg-gray">{{ $title }}</h1>
 
   <form class="row text-white rounded-3 bg-gray p-5" action='{{ $route }}' method='POST'>
     @csrf
